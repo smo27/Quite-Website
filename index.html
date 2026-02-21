@@ -1467,6 +1467,58 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     font-size: 32px;
   }
 }
+
+/* ── RESPONSIVE: SIGNUP — PRECISE SELECTORS ── */
+@media (max-width: 768px) {
+  /* The section itself is the 2-col grid container */
+  .signup {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  /* Stack first-name + email inputs vertically */
+  .signup-row {
+    flex-direction: column;
+  }
+  /* All inputs and the submit button fill the full width */
+  .signup-input,
+  .signup-submit {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* Stack the three blend-picker labels vertically */
+  .signup-right fieldset > div {
+    flex-direction: column;
+  }
+  /* Each picker label fills the row */
+  .signup-right fieldset > div > label {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ── RESPONSIVE: HOW-TO — PRECISE SELECTORS ── */
+@media (max-width: 768px) {
+  /* Collapse the 2-col header grid */
+  .howto-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  /* Collapse the 4-col steps grid to a single column */
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Replace right-border with bottom-border when steps stack vertically */
+  .step {
+    border-right: none;
+    border-bottom: 1px solid rgba(160,120,60,0.12);
+  }
+  .step:last-child {
+    border-bottom: none;
+  }
+}
 </style>
 </head>
 <body>
