@@ -1389,6 +1389,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     border-radius: 4px;
   }
 }
+
+/* ── RESPONSIVE: SIGNUP SECTION ── */
+@media (max-width: 900px) {
+  .signup-inner, [class*="signup-inner"], #signup > div {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .signup-right, [class*="signup-right"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-form .signup-row {
+    flex-direction: column;
+  }
+  .signup-input {
+    width: 100%;
+  }
+  .signup-submit {
+    width: 100%;
+  }
+  .picker-options, [class*="picker"] {
+    gap: 6px;
+  }
+}
+
+/* ── RESPONSIVE: PROVENANCE SECTION ── */
+@media (max-width: 900px) {
+  .provenance-inner, [class*="prov"] > div:first-child {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .prov-card {
+    width: 100%;
+  }
+}
+
+/* ── RESPONSIVE: PHILOSOPHY / HOW TO SECTION ── */
+@media (max-width: 900px) {
+  .philosophy-inner, .how-inner, [class*="philosophy"], [class*="how-to"] {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 </style>
 </head>
 <body>
