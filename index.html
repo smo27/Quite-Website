@@ -1306,6 +1306,12 @@ footer {
   color: #9a5a20;
   line-height: 1.55;
 }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #9a5a20;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 </style>
 </head>
 <body>
@@ -1313,7 +1319,7 @@ footer {
 <div class="cursor" id="cursor"></div>
 
 <!-- NAV -->
-<nav>
+<nav role="navigation" aria-label="Main navigation">
   <a href="#" class="nav-logo">Quite</a>
   <ul class="nav-links">
     <li><a href="#products">Shop</a></li>
