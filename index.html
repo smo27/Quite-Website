@@ -1434,6 +1434,39 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     gap: 40px;
   }
 }
+
+/* ── RESPONSIVE: FOOTER ── */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+/* ── RESPONSIVE: SECTION PADDING ── */
+@media (max-width: 900px) {
+  section, [class*="-section"] {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  section, [class*="-section"] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section-title, [class*="section-title"] {
+    font-size: 32px;
+  }
+}
 </style>
 </head>
 <body>
