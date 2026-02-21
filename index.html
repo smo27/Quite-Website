@@ -1498,6 +1498,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   }
 }
 
+/* ── RESPONSIVE: PROVENANCE FACTS ALIGNMENT ── */
+@media (max-width: 768px) {
+  /* Normalise spacing and alignment across all three fact items */
+  .prov-fact {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 0;
+  }
+  /* First item has no preceding sibling to divide from — remove top border
+     and top padding so it sits flush with the body text above it,
+     matching the visual rhythm of the separator-only gaps between items 2 and 3 */
+  .prov-fact:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+  /* Remove the desktop micro-nudge so the icon top edge is exactly flush
+     with the title top edge on all three items */
+  .prov-fact-icon {
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+}
+
 /* ── RESPONSIVE: HOW-TO — PRECISE SELECTORS ── */
 @media (max-width: 768px) {
   /* Collapse the 2-col header grid */
