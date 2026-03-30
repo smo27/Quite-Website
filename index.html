@@ -1636,78 +1636,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 <!-- PRODUCTS -->
 <section class="products" id="products">
-  <div class="products-header">
-    <div class="products-header-left">
-      <span class="section-eyebrow">The range</span>
-      <h2 class="section-title">Three cocoas.<br><strong>One good habit.</strong></h2>
-    </div>
-    <a href="#" class="products-link">See all products</a>
-  </div>
-  <div class="products-grid">
-
-    <!-- 32% -->
-    <div class="product-card">
-      <div class="product-visual pv-1">
-        <div class="product-tin-mock ptm-1">
-          <div class="ptm-stripe s1"></div>
-          <div class="ptm-name">Quite</div>
-          <div class="ptm-rule"></div>
-          <div class="ptm-pct">32% cacao</div>
-        </div>
-        <div class="product-tag">Milk</div>
-      </div>
-      <div class="product-body">
-        <div class="product-name">Quite Milk</div>
-        <div class="product-pct">32% cacao · smooth &amp; gentle</div>
-        <p class="product-desc">Creamy, rounded, and easy. The one for mornings when you want something warm and familiar without thinking about it too hard.</p>
-        <div class="product-meta">
-          <a href="#signup" class="product-btn" style="background:#9a8060;">Get early access</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 52% -->
-    <div class="product-card">
-      <div class="product-visual pv-2">
-        <div class="product-tin-mock ptm-2">
-          <div class="ptm-stripe s2"></div>
-          <div class="ptm-name">Quite</div>
-          <div class="ptm-rule"></div>
-          <div class="ptm-pct">52% cacao</div>
-        </div>
-        <div class="product-tag">Original</div>
-      </div>
-      <div class="product-body">
-        <div class="product-name">Quite Original</div>
-        <div class="product-pct">52% cacao · the sweet spot</div>
-        <p class="product-desc">Where milk chocolate warmth meets real cocoa depth. The one most people end up buying every time. Quite the crowd pleaser.</p>
-        <div class="product-meta">
-          <a href="#signup" class="product-btn" style="background:#9a8060;">Get early access</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- 72% -->
-    <div class="product-card">
-      <div class="product-visual pv-3">
-        <div class="product-tin-mock ptm-3">
-          <div class="ptm-stripe s3"></div>
-          <div class="ptm-name">Quite</div>
-          <div class="ptm-rule"></div>
-          <div class="ptm-pct">72% cacao</div>
-        </div>
-        <div class="product-tag">Dark</div>
-      </div>
-      <div class="product-body">
-        <div class="product-name">Quite Dark</div>
-        <div class="product-pct">72% cacao · bold &amp; complex</div>
-        <p class="product-desc">Proper cocoa intensity. Fruity, a little bitter, deeply satisfying. The one for people who think they don't like hot chocolate.</p>
-        <div class="product-meta">
-          <a href="#signup" class="product-btn" style="background:#9a8060;">Get early access</a>
-        </div>
-      </div>
-    </div>
-
+  <div style="position:relative;z-index:1;max-width:720px;margin:0 auto;text-align:center;padding:80px 0 20px;">
+    <span class="section-eyebrow">The product</span>
+    <h2 class="section-title" style="margin-bottom:24px;">Real cocoa.<br><strong>One scoop. That's it.</strong></h2>
+    <p style="font-family:'DM Sans',sans-serif;font-size:16px;color:var(--mid);line-height:1.75;max-width:520px;margin:0 auto 40px;">
+      Quite is a hot chocolate made from traceable, above-fair-trade cocoa. No machine, no occasion, no ceremony. Heat milk, add one scoop, drink it. Made for every day.
+    </p>
+    <a href="#" onclick="openSignupModal(); return false;" class="btn-primary">Get early access</a>
   </div>
 </section>
 
@@ -1783,13 +1718,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   <div class="provenance-grid">
     <div class="prov-left">
       <div>
-        <div class="prov-eyebrow">How we'll source</div>
+        <div class="prov-eyebrow">How we source</div>
         <div class="prov-title">
           Quite <strong>traceable.</strong><br>
           <em>That's the standard.</em>
         </div>
       </div>
-      <p class="prov-body">We think knowing where your food comes from changes how it tastes. Not because provenance is a marketing device — because it's true. These are the sourcing principles we're building Quite around from day one.</p>
+      <p class="prov-body">We think knowing where your food comes from changes how it tastes. Not because provenance is a marketing device — because it's true. These are the sourcing principles Quite is built around from day one.</p>
       <div class="prov-facts">
         <div class="prov-fact">
           <div class="prov-fact-icon icon-green">🌱</div>
@@ -1819,7 +1754,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
       <div class="card-title">This is what <strong>traceable means</strong> to us.</div>
       <div class="card-body">We're building supplier relationships now, before we launch. When we go live, every pack will name the farm or cooperative, the region, and what we paid above fair trade. Not because we have to — because it makes better chocolate and it's the right thing to do.</div>
       <div class="card-rule"></div>
-      <div class="card-foot">"We'll introduce them properly when we launch."</div>
+      <div class="card-foot"><em>"Every pack names the farm, the region, and what we paid. That's the standard."</em></div>
     </div>
   </div>
 </section>
@@ -1828,11 +1763,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 <section class="signup" id="signup">
   <div class="signup-left">
     <h2 class="signup-title">
-      Be first<br>to <strong>know.</strong>
+      Be the first<br>to <strong>try it.</strong>
     </h2>
-    <p class="signup-sub">We're not in shops yet. Sign up and we'll let you know when samples are ready and when we launch — with an early access discount set aside for you.</p>
+    <p class="signup-sub">We're not in shops yet. Sign up and we'll let you know the moment we launch — with an early access discount and a free sample set aside for you.</p>
   </div>
-  <div class="signup-right">   <div id="mc_embed_signup">     <form action="https://quitechocolate.us11.list-manage.com/subscribe/post?u=429771d6d2e11b688db2fadfe&amp;id=fa4de923ef&amp;f_id=00c716e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">       <div class="signup-form">   <div class="signup-row">     <input type="text" class="signup-input" placeholder="First name" name="FNAME" id="mce-FNAME" aria-label="First name">     <input type="email" class="signup-input" placeholder="Email address" name="EMAIL" id="mce-EMAIL" required aria-label="Email address">   </div>    <fieldset style="border:none;padding:0;margin:0;">   <legend style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#7a6040;margin-bottom:8px;display:block;">Which sounds most like you?</legend>   <div style="display:flex;gap:8px;width:100%;">        <label for="mmerge7-milk" style="flex:1;display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:2px;border:1.5px solid rgba(42,26,6,0.12);background:rgba(250,244,232,0.55);cursor:pointer;transition:all 0.15s;">         <input type="radio" name="MMERGE7" id="mmerge7-milk" value="32% Milk" style="position:absolute;opacity:0;width:0;height:0;">         <span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#f0ddb0,#c8983a);box-shadow:0 1px 4px rgba(0,0,0,0.12);display:block;"></span>         <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(42,26,6,0.65);">32% <span style="font-style:italic;font-family:'Fraunces',serif;">Milk</span></span>       </label>        <label for="mmerge7-orig" style="flex:1;display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:2px;border:1.5px solid rgba(192,120,48,0.5);background:rgba(250,244,232,0.8);cursor:pointer;transition:all 0.15s;">         <input type="radio" name="MMERGE7" id="mmerge7-orig" value="52% Original" checked style="position:absolute;opacity:0;width:0;height:0;">         <span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#c87840,#8a4818);box-shadow:0 1px 4px rgba(0,0,0,0.15);display:block;"></span>         <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(42,26,6,0.65);">52% <span style="font-style:italic;font-family:'Fraunces',serif;">Original</span></span>       </label>        <label for="mmerge7-dark" style="flex:1;display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:2px;border:1.5px solid rgba(42,26,6,0.12);background:rgba(250,244,232,0.55);cursor:pointer;transition:all 0.15s;">         <input type="radio" name="MMERGE7" id="mmerge7-dark" value="72% Dark" style="position:absolute;opacity:0;width:0;height:0;">         <span style="flex-shrink:0;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#6a3018,#2a1006);box-shadow:0 1px 4px rgba(0,0,0,0.2);display:block;"></span>         <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(42,26,6,0.65);">72% <span style="font-style:italic;font-family:'Fraunces',serif;">Dark</span></span>       </label>      </div>   </fieldset>    <div class="signup-row">     <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="signup-submit">Quite. I'm in →</button>   </div>   <div style="display:flex;align-items:flex-start;gap:10px;">   <input type="checkbox" name="gdpr[39625]" id="gdpr_39625" value="Y" required aria-label="Consent to receive marketing updates from Quite"     style="margin-top:3px;flex-shrink:0;accent-color:#2a1a06;width:14px;height:14px;cursor:pointer;">   <label for="gdpr_39625" style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(42,26,6,0.55);line-height:1.55;cursor:pointer;">     I'd like to receive updates from Quite about the launch and when samples are available. You can unsubscribe at any time. <a href="/privacy" style="color:rgba(42,26,6,0.5);border-bottom:1px solid rgba(42,26,6,0.2);">Privacy notice</a>   </label> </div>   <p class="signup-note">We'll email you when samples are ready and when we launch. That's it.</p> </div>  <script> document.querySelectorAll('label[for^="mmerge7"]').forEach(function(label) {   label.addEventListener('click', function() {     document.querySelectorAll('label[for^="mmerge7"]').forEach(function(l) {       l.style.borderColor = 'rgba(42,26,6,0.12)';       l.style.background = 'rgba(250,244,232,0.55)';     });     this.style.borderColor = 'rgba(192,120,48,0.5)';     this.style.background = 'rgba(250,244,232,0.8)';   }); }); </script>       <div style="position:absolute;left:-5000px;" aria-hidden="true">         <input type="text" name="b_429771d6d2e11b688db2fadfe_fa4de923ef" tabindex="-1" value="">       </div>     </form>   </div> </div>
+  <div class="signup-right">
+    <div id="mc_embed_signup">
+      <form action="https://quitechocolate.us11.list-manage.com/subscribe/post?u=429771d6d2e11b688db2fadfe&id=fa4de923ef&f_id=00c716e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+        <div class="signup-form">
+          <div class="signup-row">
+            <input type="text" class="signup-input" placeholder="First name" name="FNAME" id="mce-FNAME" aria-label="First name">
+            <input type="email" class="signup-input" placeholder="Email address" name="EMAIL" id="mce-EMAIL" required aria-label="Email address">
+          </div>
+          <div class="signup-row">
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="signup-submit">Notify me at launch →</button>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px;">
+            <input type="checkbox" name="gdpr[39625]" id="gdpr_39625" value="Y" required aria-label="Consent to receive marketing updates from Quite" style="margin-top:3px;flex-shrink:0;accent-color:#2a1a06;width:14px;height:14px;cursor:pointer;">
+            <label for="gdpr_39625" style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(42,26,6,0.55);line-height:1.55;cursor:pointer;">
+              I'd like to receive updates from Quite about the launch and when samples are available. You can unsubscribe at any time. <a href="/privacy" style="color:rgba(42,26,6,0.5);border-bottom:1px solid rgba(42,26,6,0.2);">Privacy notice</a>
+            </label>
+          </div>
+          <p class="signup-note">Launch notification + early access discount. That's it.</p>
+        </div>
+        <div style="position:absolute;left:-5000px;" aria-hidden="true">
+          <input type="text" name="b_429771d6d2e11b688db2fadfe_fa4de923ef" tabindex="-1" value="">
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
