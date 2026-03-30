@@ -1549,6 +1549,31 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 </style>
 </head>
 <body>
+<div id="signup-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;">
+  <div id="modal-overlay" style="position:absolute;inset:0;background:rgba(42,26,6,0.55);backdrop-filter:blur(4px);" onclick="closeSignupModal()"></div>
+  <div style="position:relative;z-index:1;background:var(--cream);border-radius:4px;padding:52px 48px;max-width:480px;width:calc(100% - 48px);box-shadow:0 32px 80px rgba(42,26,6,0.22);">
+    <button onclick="closeSignupModal()" aria-label="Close" style="position:absolute;top:18px;right:18px;background:none;border:none;cursor:pointer;font-size:20px;color:var(--mid);line-height:1;padding:4px 8px;">✕</button>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#9a5a20;margin-bottom:16px;">Early access</div>
+    <h2 id="modal-title" style="font-family:'Fraunces',serif;font-style:italic;font-weight:200;font-size:32px;color:var(--dark);line-height:1.15;letter-spacing:-0.025em;margin-bottom:10px;">Quite.<br><strong style="font-weight:800;font-style:normal;">Sign up.</strong></h2>
+    <p style="font-family:'DM Sans',sans-serif;font-size:14px;color:var(--mid);line-height:1.65;margin-bottom:28px;">Be first to know when we launch. We'll set aside a free sample and an early access discount for everyone on the list.</p>
+    <div id="mc_embed_signup_modal">
+      <form action="https://quitechocolate.us11.list-manage.com/subscribe/post?u=429771d6d2e11b688db2fadfe&id=fa4de923ef&f_id=00c716e1f0" method="post" id="mc-embedded-subscribe-form-modal" name="mc-embedded-subscribe-form-modal" target="_blank">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <input type="text" class="signup-input" placeholder="First name" name="FNAME" aria-label="First name" style="width:100%;">
+          <input type="email" class="signup-input" placeholder="Email address" name="EMAIL" required aria-label="Email address" style="width:100%;">
+          <button type="submit" class="signup-submit" style="width:100%;padding:15px;">Quite. I'm in →</button>
+          <div style="display:flex;align-items:flex-start;gap:10px;">
+            <input type="checkbox" name="gdpr[39625]" id="gdpr_modal" value="Y" required aria-label="Consent to receive marketing updates from Quite" style="margin-top:3px;flex-shrink:0;accent-color:#2a1a06;width:14px;height:14px;cursor:pointer;">
+            <label for="gdpr_modal" style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(42,26,6,0.5);line-height:1.55;cursor:pointer;">Updates about the launch and samples. Unsubscribe any time. <a href="/privacy" style="color:rgba(42,26,6,0.45);border-bottom:1px solid rgba(42,26,6,0.18);">Privacy notice</a></label>
+          </div>
+        </div>
+        <div style="position:absolute;left:-5000px;" aria-hidden="true">
+          <input type="text" name="b_429771d6d2e11b688db2fadfe_fa4de923ef" tabindex="-1" value="">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <div class="cursor" id="cursor"></div>
@@ -1839,6 +1864,32 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     el.style.transition = `opacity 0.6s ease ${i * 0.08}s, transform 0.6s ease ${i * 0.08}s`;
     observer.observe(el);
   });
+
+  // Modal open/close
+  function openSignupModal() {
+    const modal = document.getElementById('signup-modal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => { modal.querySelector('input[name="FNAME"]').focus(); }, 50);
+  }
+
+  function closeSignupModal() {
+    const modal = document.getElementById('signup-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSignupModal();
+  });
+
+  // Auto-open modal after 3 seconds, once per session
+  if (!sessionStorage.getItem('modal_shown')) {
+    setTimeout(function() {
+      openSignupModal();
+      sessionStorage.setItem('modal_shown', 'true');
+    }, 3000);
+  }
 </script>
 </body>
 </html>
